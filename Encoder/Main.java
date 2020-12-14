@@ -10,15 +10,15 @@ class Main {
 		Salt salt = new Salt();
 		Convert conv = new Convert();
 		Scanner in = new Scanner(System.in);
-	
-		System.out.println("Enter the String to be encrypted.");
-		input = acce.Accept_Input();
 		
 		System.out.println("Enter the number to encrypt the string with.");
+		EncNum = in.nextInt();
 
-		input = mult.mul(input);
-		input = mult.mul(input);
-		input = mult.mul(input);
+		input = acce.Accept_Input();
+
+		input = mult.mul(input, EncNum);
+		input = mult.mul(input, EncNum);
+		input = mult.mul(input, EncNum);
 
 		input = salt.replacer(input);
 
@@ -34,6 +34,6 @@ class Main {
 				outputS = outputS + "\\n";
 		}
 
-		System.out.println(outputS + "\n The String has been encoded using 404 only and not the provided number.");
+		System.out.println(outputS);
 	}
 }
