@@ -1,14 +1,14 @@
 public class Salt {
 
-	public static String[] salter(String[] input) {
-		String[] output = new String[input.length];
+	public static String salter(String input) {
+		String output = "";
 		//
-		for(int i = 0;i < input.length;i++) {
-			for(int j = input[i].length();j >= 0;j--) {
-			}
-		}
+		for(int i = 0;i < input.length();i = i + 10)
+			input = input.substring(0, i) + random() + input.substring(i);
+
+		output = input;
 		//
-		return input;//temp
+		return output;//temp
 	}
 
 	public static String[] replacer(String[] input) {
@@ -26,13 +26,20 @@ public class Salt {
 		return output;
 	}
 
-	public static char random() {
+	public static String random() {
 		
 		int min = 32;
 		int max = 126;
-		int num = min +  (int)(Math.random()*(max - min + 1));
-		char random = (char)num;
+		int num;
+		char random;
+		String output = "";
 
-		return random;
+		for(int i = 0;i < 5;i++) {
+			num = min +  (int)(Math.random()*(max - min + 1));
+			random = (char)num;
+			output = output + random;
+		}
+
+		return output;
 	}
 }
