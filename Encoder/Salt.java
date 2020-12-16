@@ -4,7 +4,11 @@ public class Salt {
 		String output = "";
 		//
 		for(int i = 0;i < input.length();i = i + 10)
+		{
 			input = input.substring(0, i) + random() + input.substring(i);
+			if(i % 1000 == 0)
+				System.out.println( + i + " / " + (input.length() * 2));
+		}
 
 		output = input;
 		//
