@@ -18,31 +18,23 @@ class Main {
 
 		input = acce.Accept_Input();
 
-		System.out.println("press Enter To Start Encode.");
 		System.out.println("7 stage process starts..........");
-		Thread.sleep(1000);
 		System.out.println("NOW");
-		System.out.println("Stage 1 Completen\t\t\t\tInput complete.");
-		Thread.sleep(1000);
+		System.out.println("Stage 1 Completed\t\t\t\tInput complete.");
 
 
 		input = mult.mul(input, EncNum);
-		System.out.println("Stage 2 Completen\t\t\t\tMultiply 0 complete.");
-		Thread.sleep(1000);
+		System.out.println("Stage 2 Completed\t\t\t\tMultiply 0 complete.");
 		input = mult.mul(input, EncNum);
-		System.out.println("Stage 3 Completen\t\t\t\tMultiply 1 complete.");
-		Thread.sleep(1000);
+		System.out.println("Stage 3 Completed\t\t\t\tMultiply 1 complete.");
 		input = mult.mul(input, EncNum);
-		System.out.println("Stage 4 Completen\t\t\t\tMultiply 2 complete.");
-		Thread.sleep(1000);
+		System.out.println("Stage 4 Completed\t\t\t\tMultiply 2 complete.");
 
 		input = salt.replacer(input);
-		System.out.println("Stage 5 Completen\t\t\t\tReplacer complete.");
-		Thread.sleep(1000);
+		System.out.println("Stage 5 Completed\t\t\t\tReplacer complete.");
 
 		input = conv.convert(input);
-		System.out.println("Stage 6 Completen\t\t\t\tconvert complete.");
-		Thread.sleep(1000);
+		System.out.println("Stage 6 Completed\t\t\t\tconvert complete.");
 
 
 		for(int i = 0;i < input.length;i++) {
@@ -52,15 +44,14 @@ class Main {
 		}
 
 		outputS = salt.salter(outputS);
-		System.out.println("Stage 7 Completen\t\t\t\tSalter complete.");
-		Thread.sleep(1000);
+		System.out.println("Stage 7 Completed\t\t\t\tSalter complete.");
 
 		if(FlwW.WriteToFile(outputS))
-			System.out.println("Stage 8 Complete:\t\t\t\t\tFile Write Complete.");
+			System.out.println("Stage 8 Completed:\t\t\t\t\tFile Write Complete.");
 		else {
 			System.out.println("Stage 8 FAILED:\t\t\t\t\tFILE WRITE FAILED");
 			System.out.println("Just printing the output.");
-			System.out.print("Starting printing in.....");
+			System.out.print("Starting printing in");
 			Thread.sleep(1000);
 			System.out.print(".....3");
 			Thread.sleep(1000);

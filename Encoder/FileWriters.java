@@ -6,7 +6,7 @@ import java.io.*;
 
 public class FileWriters {
 	public static boolean WriteToFile(String input) {
-		String fileDest = "C:\\Users\\Aksh Desai\\3D Objects\\Encipher\\Encoder\\Output.txt";
+		String fileDest = "C:\\Output\\Output.txt";
     	try {
     		FileWriter myWriter = new FileWriter(fileDest);
     		myWriter.write(input);
@@ -15,12 +15,13 @@ public class FileWriters {
     		}
     		catch (IOException e) {
     			try {
+                    System.out.println(e);
     			    	FileCreate(fileDest);
     			    	FileWriter myWriter = new FileWriter(fileDest);
     			    	myWriter.write(input);
     			    }
     			    catch(IOException a) {
-    			    	System.out.println(e);
+    			    	System.out.println(a);
     			    	return false;
     			        }
     		}

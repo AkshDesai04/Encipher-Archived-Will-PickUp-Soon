@@ -1,13 +1,21 @@
 public class Salt {
 
 	public static String salter(String input) {
+		int length = input.length()*2 + 1;
+		double progress;
 		String output = "";
 		//
 		for(int i = 0;i < input.length();i = i + 10)
 		{
 			input = input.substring(0, i) + random() + input.substring(i);
-			if(i % 1000 == 0)
-				System.out.println( + i + " / " + (input.length() * 2));
+
+			if(i != 0)
+			{
+				if(i % 10000 == 0) {
+					progress = i / length * 100;
+					System.out.println("\tStage 7: Progress = " + i + '/' + length + "\t\t" + progress);
+				}
+			}
 		}
 
 		output = input;
