@@ -1,0 +1,12 @@
+Divide input array into sections and then multiply
+Divide input array into sections and then salt(replace)
+Divide input array into sections and then convert
+
+DO SOMETHING FOR SALTING(SALT)
+
+Use lists insted of arrays
+
+Add Multi Threading Functionality to all so, it can do the stuff that was divided above.
+Use another thread as an I/O Thread and, only take I/O through that thread.
+Make all the working to be done in the background and, do not print anything at all.
+On request, Print the current status using the I/O Thread only.

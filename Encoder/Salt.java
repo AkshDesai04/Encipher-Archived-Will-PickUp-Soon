@@ -7,11 +7,10 @@ public class Salt {
 		//
 		for(int i = 0;i < input.length();i = i + 10)
 		{
-			input = input.substring(0, i) + random() + input.substring(i);
 
 			if(i != 0)
 			{
-				if(i % 10000 == 0) {
+				if(i % 1000000 == 0) {
 					progress = i / length * 100;
 					System.out.println("\tStage 7: Progress = " + i + '/' + length + "\t\t" + progress);
 				}
@@ -20,7 +19,7 @@ public class Salt {
 
 		output = input;
 		//
-		return output;//temp
+		return "Hello World";//temp
 	}
 
 	public static String[] replacer(String[] input) {

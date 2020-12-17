@@ -59,8 +59,10 @@ class Main {
 			Thread.sleep(1000);
 			System.out.print(".....1");
 			Thread.sleep(1000);
-			System.out.println("Starting Print");
-			System.out.println(outputS);
+			System.out.println("Starting Print\n lol not even gonna print.");
+			//System.out.println(outputS);
 		}
 	}
 }
+
+//started 5:30
