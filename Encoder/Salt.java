@@ -1,25 +1,35 @@
 public class Salt {
 
 	public static String salter(String input) {
-		int length = input.length()*2 + 1;
-		double progress;
-		String output = "";
+		int i;
+		System.out.println("Randome String Being Generated.");
+		String output = "", random = random(input.length() + 10);
+		System.out.println("Randome String Generated.");
+		//System.out.println("Randon String = " + random);
 		//
-		for(int i = 0;i < input.length();i = i + 10)
-		{
-
-			if(i != 0)
-			{
-				if(i % 1000000 == 0) {
-					progress = i / length * 100;
-					System.out.println("\tStage 7: Progress = " + i + '/' + length + "\t\t" + progress);
+		for(i = 0;i < input.length();i = i + 5) {
+			try {
+				output = output +  random.substring(i, i+5) + input.substring(i, i+5);
+			}
+			catch(Exception e) {
+					try {
+					output = output +  random.substring(i, random.length()) + input.substring(i, input.length());
+				}
+				catch(Exception ex)
+				{
+					//System.out.println("Eoor Occured as: " + ex);
+					output = output + input.substring(i, input.length());
 				}
 			}
-		}
 
-		output = input;
-		//
-		return "Hello World";//temp
+			//System.out.println("output: " + output);
+
+			//if(i%1000 == 0)
+				//System.out.println(+ i +  " / " + (input.length()));
+		}
+		System.out.println(+ --i +  " / " + (input.length()));
+
+		return output;//temp
 	}
 
 	public static String[] replacer(String[] input) {
@@ -37,20 +47,9 @@ public class Salt {
 		return output;
 	}
 
-	public static String random() {
-		
-		int min = 32;
-		int max = 126;
-		int num;
-		char random;
+	public static String random(int x) {
+		//Code meeds to be improved here.
 		String output = "";
-
-		for(int i = 0;i < 5;i++) {
-			num = min +  (int)(Math.random()*(max - min + 1));
-			random = (char)num;
-			output = output + random;
-		}
-
 		return output;
 	}
 }

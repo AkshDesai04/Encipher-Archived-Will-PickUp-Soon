@@ -43,10 +43,11 @@ class Main {
 				outputS = outputS + "\\t";
 		}
 
-		outputS = salt.salter(outputS);
+		//System.out.println("Pre Salt: \n" + outputS + "\n\n\n");
+		//outputS = salt.salter(outputS);
 		System.out.println("Stage 7 Completed\t\t\t\tSalter complete.");
 
-		if(FlwW.WriteToFile(outputS))
+		if(!FlwW.WriteToFile(outputS))
 			System.out.println("Stage 8 Completed:\t\t\t\t\tFile Write Complete.");
 		else {
 			System.out.println("Stage 8 FAILED:\t\t\t\t\tFILE WRITE FAILED");
@@ -59,9 +60,10 @@ class Main {
 			Thread.sleep(1000);
 			System.out.print(".....1");
 			Thread.sleep(1000);
-			System.out.println("Starting Print\n lol not even gonna print.");
+			System.out.println("\n\n\n" + outputS);
 			//System.out.println(outputS);
 		}
+		System.out.println("\n\n\n" + outputS);
 	}
 }
 
