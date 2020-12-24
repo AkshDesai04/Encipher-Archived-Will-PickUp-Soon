@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 class Main {
 	public static void main(String[]args) throws InterruptedException {
-		String[] input, hold, Sinput;
-		String outputS = "";
+		
 		int EncNum;
+		String outputS = "";
+		String[] input, hold, Sinput;
+
 		Input acce = new Input();
 		Multiply mult = new Multiply();
 		Salt salt = new Salt();
@@ -42,10 +44,6 @@ class Main {
 			if(i != input.length - 1)
 				outputS = outputS + "\\t";
 		}
-
-		//System.out.println("Pre Salt: \n" + outputS + "\n\n\n");
-		//outputS = salt.salter(outputS);
-		System.out.println("Stage 7 Completed\t\t\t\tSalter complete.");
 
 		if(!FlwW.WriteToFile(outputS))
 			System.out.println("Stage 8 Completed:\t\t\t\t\tFile Write Complete.");
