@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Input {
 	public static String[] Accept_Input() {
 		int i = 0;
-		String[] input = new String[1], flag = new String[500000000];
+		String[] input = new String[1], flag = new String[50000000];
 		String hold = "";
 		Scanner in = new Scanner(System.in);
 

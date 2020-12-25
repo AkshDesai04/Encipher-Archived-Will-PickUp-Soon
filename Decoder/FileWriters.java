@@ -6,7 +6,7 @@ import java.io.*;
 
 public class FileWriters {
 	public static boolean WriteToFile(String input) {
-		String fileDest = "C:\\Output\\Output.txt";
+		String fileDest = "C:\\Output\\OutputEnc.txt";
     	try {
     		FileWriter myWriter = new FileWriter(fileDest);
     		myWriter.write(input);
