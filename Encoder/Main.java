@@ -1,10 +1,9 @@
-import java.lang.*;
 import java.util.Scanner;
 
 class Main {
-	public static void main(String[]args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException {
 		
-		int EncNum;
+		int EncNum = 1;
 		String outputS = "";
 		String[] input, hold, Sinput;
 
@@ -16,11 +15,12 @@ class Main {
 		Scanner in = new Scanner(System.in);
 		
 		System.out.println("Enter the number to encrypt the string with.");
-		EncNum = in.nextInt();
+		try {EncNum = in.nextInt();}
+		catch(Exception e) {System.out.println(e + "\nConsidering it to be 1");}
 
 		input = acce.Accept_Input();
 
-		System.out.println("7 stage process starts..........");
+		System.out.println("7 stage process starts..........\n\n\n");
 		System.out.println("NOW");
 		System.out.println("Stage 1 Completed\t\t\t\tInput complete.");
 
@@ -62,6 +62,8 @@ class Main {
 			//System.out.println(outputS);
 		}
 		System.out.println("\n\n\n" + outputS);
+
+		main(args);
 	}
 }
 

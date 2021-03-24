@@ -27,7 +27,6 @@ public class Input {
 			
 		for(i = 0;i < input.length - 1;i++){}
 		
-		in.close();
 		return input;
 	}
 }
